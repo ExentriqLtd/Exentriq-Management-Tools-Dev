@@ -1,0 +1,67 @@
+/* ---------------------------------------------------------------------- */
+/* Notifications main
+/* ---------------------------------------------------------------------- */
+
+body.tp_notifications_main {
+
+    #__blaze-root {
+        background-color: #f1f1f1;
+    }
+}
+
+#notifications_main {
+    background-color: #fff;
+    max-width: 360px;
+    height: 100%;
+    margin: 0 auto;
+
+    .eq-mt-card-tabs {
+        box-shadow: none;
+        background-color: transparent;
+        border-bottom: 1px solid #e1e1e1;
+        height: 56px;
+
+        .eq-ui-card-supporting-text {
+            padding: 0;
+            height: 100%;
+
+            .eq-ui-tabs {
+
+
+                .eq-ui-indicator {
+                    background-color: transparent;
+                }
+
+                .eq-ui-tab {
+                    text-transform: none;
+                    letter-spacing: 0;
+
+                    a {
+                        padding-top: 6px;
+                        color: #757575;
+
+                        .eq-ui-badge {
+
+                            &[data-badge]:after {
+                                top: -8px;
+                            }
+                        }
+
+                        &:not(:hover):not(.active) {
+                            .eq-ui-badge {
+
+                                &[data-badge]:after {
+                                    background-color: #757575;
+                                }
+                            }
+                        }
+
+                        &:hover, &.active {
+                            color: $eq-man-secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

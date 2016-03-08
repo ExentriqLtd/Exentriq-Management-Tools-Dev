@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* --------------------------------------- */
+/* Import vendors
+/* --------------------------------------- */
+
+//@import url("../../lib/vendor/fancybox/source/jquery.fancybox.css");
+
+/*** Custom Colors ***/
+$eq-ui-primary-color: #2f4357 !default;
+$eq-ui-secondary-color: #1bbc9b !default;
+
+// Custom - Exentriq bootstrap material ui
+@import "../bower_components/exentriq-bootstrap-material-ui/src/sass/exentriq-bootstrap-material-ui";
+
+// Common
+@import "common/mixins";
+@import "common/variables";
+
+// Extend others libs...
+
+// Global
+@import "common/global";
+
+// components
+@import "components/global_search";
+
+// views
+@import "views/notifications/missions";
+@import "views/notifications/notifications";
+@import "views/notifications/notifications_main";
+@import "views/notifications/tasks";

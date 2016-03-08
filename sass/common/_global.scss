@@ -1,0 +1,19 @@
+/* --------------------------------------- */
+/* Global
+/* --------------------------------------- */
+
+body {
+
+}
+
+/* Container */
+.container, .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+// Fix - TODO - Fix focus after click in meteor
+.btn-default:focus {
+    color: inherit;
+    background-color: transparent;
+}
