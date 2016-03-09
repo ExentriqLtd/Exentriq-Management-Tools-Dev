@@ -35,6 +35,20 @@ grunt
 
 Grunt will then watch concurrently for changes to .js and .scss files build each as required.
 
+## i18n Extract Tool Usage
+
+Extract messages:
+
+```
+grunt pot_compile
+```
+
+Compile messages:
+
+```
+grunt json_compile
+```
+
 ## Run App
 
 ```

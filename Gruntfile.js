@@ -91,7 +91,7 @@ module.exports = function ( grunt ) {
                             'exentriq-bootstrap-material-ui.js',
                             'exentriq-bootstrap-material-ui.js.map'
                         ],
-                        dest: 'app/client/lib/exentriq-bootstrap-material-ui'
+                        dest: 'app/client/lib/vendor/exentriq-bootstrap-material-ui'
                     }
                 ]
             }
@@ -118,6 +118,48 @@ module.exports = function ( grunt ) {
             }
         },
 
+        // Build POT
+        xgettext: {
+            target: {
+                files: {
+                    handlebars: ["<%= meta.client_dir %>/views/**/*.html"],
+                    javascript: [
+                        "<%= meta.client_dir %>/**/*.js",
+                        "<%= meta.lib_dir %>/**/*.js",
+                        "<%= meta.packages_dir %>/eq-meteor-lib/**/*.js",
+                        "<%= meta.server_dir %>/**/*.js",
+                        "!<%= meta.client_dir %>/lib/vendor/**/*.js",
+                        "!<%= meta.client_dir %>/views/orgManager/**/*.js"
+                    ]
+                },
+                options: {
+                    functionName: "tr",
+                    potFile: "translations/messages.pot"
+                    /*processMessage: function(message) {
+                        return message.replace(/\s+/g, " "); // simplify whitespace
+                    }*/
+                }
+            }
+        },
+
+        // Build JSON
+        i18next_conv: {
+            target: {
+                files: [
+                    {
+                        dest: "<%= meta.lib_dir %>/i18n/en.i18n.json",
+                        src: "translations/en.i18n.po",
+                        domain: "en"
+                    },
+                    {
+                        dest: "<%= meta.lib_dir %>/i18n/es.i18n.json",
+                        src: "translations/es.i18n.po",
+                        domain: "es"
+                    }
+                ]
+            }
+        },
+
         // System Notifications
         notify: {
             sass_compile: {
@@ -133,6 +175,25 @@ module.exports = function ( grunt ) {
                 options: {
                     enabled: true,
                     message: 'Release Build Completed!',
+                    title: "<%= meta.notify_title %>",
+                    success: true,
+                    duration: 1
+                }
+            },
+            pot_compile: {
+                options: {
+                    enabled: true,
+                    message: 'POT Build Completed!',
+                    title: "<%= meta.notify_title %>",
+                    success: true,
+                    duration: 1
+                }
+            }
+            ,
+            json_compile: {
+                options: {
+                    enabled: true,
+                    message: 'JSON Build Completed!',
                     title: "<%= meta.notify_title %>",
                     success: true,
                     duration: 1
@@ -180,12 +241,21 @@ module.exports = function ( grunt ) {
     // JS
     grunt.registerTask('_js_jshint_app', ['jshint:app']);
 
+    // POT
+    grunt.registerTask('_pot_compile', ['xgettext:target']);
+    grunt.registerTask('pot_compile', ['_pot_compile', 'notify:pot_compile']);
+
+    // JSON
+    grunt.registerTask('_json_compile', ['i18next_conv:target']);
+    grunt.registerTask('json_compile', ['_json_compile', 'notify:json_compile']);
+
     // Build
     grunt.registerTask('Build', [
         '_js_jshint_app',
         '_sass_compile',
         'copy:fonts',
         'copy:js',
+        '_pot_compile',
         'notify:release_compile'
     ]);
 

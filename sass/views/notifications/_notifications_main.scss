@@ -6,6 +6,10 @@ body.tp_notifications_main {
 
     #__blaze-root {
         background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
     }
 }
 
@@ -14,6 +18,16 @@ body.tp_notifications_main {
     max-width: 360px;
     height: 100%;
     margin: 0 auto;
+
+    .notifications-wrapper {
+        height: calc(100% - 56px);
+
+        #eq-ui-tab-notify-1,
+        #eq-ui-tab-notify-2,
+        #eq-ui-tab-notify-3 {
+            height: 100%;
+        }
+    }
 
     .eq-mt-card-tabs {
         box-shadow: none;
@@ -64,4 +78,5 @@ body.tp_notifications_main {
             }
         }
     }
+
 }
