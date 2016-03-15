@@ -30,6 +30,8 @@
             min-width: 32px;
             height: 32px;
             line-height: 32px;
+            box-shadow: none;
+            background-color: transparent;
 
             &.show {
                 display: inline-block !important;
@@ -113,6 +115,10 @@
                     font-size: 15px;
                     font-weight: 500;
                     line-height: 1.3;
+
+                    a {
+                        color: inherit;
+                    }
                 }
             }
 
@@ -265,6 +271,10 @@
                     }
                 }
             }
+        }
+
+        &.tasks_item_complete {
+           opacity: .7;
         }
 
     }

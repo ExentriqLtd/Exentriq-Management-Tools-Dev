@@ -26,6 +26,11 @@
                 &:hover {
                     background-color: transparent;
                 }
+
+                &.disabled {
+                    box-shadow: none;
+                    opacity: .5;
+                }
             }
         }
     }
@@ -64,6 +69,10 @@
             i {
                 font-size: 16px;
             }
+        }
+
+        &.notifications_item_unread {
+            background-color: rgba(27, 188, 155, 0.05);
         }
     }
 }
