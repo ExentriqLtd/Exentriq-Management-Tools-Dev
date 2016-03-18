@@ -2,4 +2,76 @@
 /* Missions
 /* ---------------------------------------------------------------------- */
 
+#missions {
+    height: calc(100% - 56px);
+    background-color: #f9f9f9;
 
+    // List
+    .eq-man-missions-list {
+        border: 0;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding: 8px;
+        padding-bottom: 0;
+        margin: 0;
+        background-color: transparent;
+    }
+
+    // Show an hide buttons
+    .eq-man-missions-list-show-completed {
+        text-align: center;
+        padding-bottom: 8px;
+
+        a {
+            display: none;
+            font-size: 12px;
+            min-width: 32px;
+            height: 32px;
+            line-height: 32px;
+            box-shadow: none;
+            background-color: transparent;
+
+            &.show {
+                display: inline-block !important;
+            }
+        }
+
+        .hide-all-missions-completed {
+            display: none;
+        }
+    }
+
+    // Completed list
+    .eq-man-missions-list-completed {
+        display: none;
+        padding-top: 0;
+    }
+
+    // Footer
+    .missions_footer {
+        border-top: 1px solid #e1e1e1;
+        height: 56px;
+        padding: 10px 24px;
+
+        p {
+            text-align: center;
+            padding: 0;
+
+            a {
+                font-size: 14px;
+                color: #757575;
+
+                &.disabled {
+                    box-shadow: none;
+                    opacity: .5;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
