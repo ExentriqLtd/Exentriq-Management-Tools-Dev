@@ -15,7 +15,6 @@ body.tp_notifications_main {
 
 #notifications_main {
     background-color: #fff;
-    max-width: 360px;
     height: 100%;
     margin: 0 auto;
 
@@ -26,6 +25,16 @@ body.tp_notifications_main {
         #eq-ui-tab-notify-2,
         #eq-ui-tab-notify-3 {
             height: 100%;
+        }
+
+        .eq-ui-btn-fab-action {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+        }
+
+        .eq-ui-modal.eq-ui-modal-bottom-sheet {
+            margin: 0 auto;
         }
     }
 
@@ -76,6 +85,63 @@ body.tp_notifications_main {
                     }
                 }
             }
+        }
+    }
+
+    // Autocomplete
+    .-autocomplete-container {
+        position: absolute;
+        left: -24px !important;
+        right: -24px !important;
+        top: auto !important;
+        bottom: 84px !important;
+
+        li.-autocomplete-item {
+            height: 48px;
+            line-height: 48px;
+            padding: 0 24px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #9b9b9b;
+
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover, &.selected {
+                background-color: #e1e1e1;
+            }
+        }
+    }
+
+    // Autocomplete input
+    .eq-man-autocomplete {
+        margin-bottom: 5px;
+
+        .eq-ui-input {
+            margin-bottom: 0;
+        }
+    }
+
+    // Autocomplete guide
+    .autocomplete-guide{
+        margin: 0;
+
+        span {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #9e9e9e;
+            text-decoration: none;
+        }
+    }
+
+    // Debug
+    &.is-debug {
+        max-width: 360px;
+
+        .eq-ui-modal.eq-ui-modal-bottom-sheet {
+            max-width: 360px;
         }
     }
 

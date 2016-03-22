@@ -5,6 +5,7 @@
 #missions {
     height: calc(100% - 56px);
     background-color: #f9f9f9;
+    position: relative;
 
     // List
     .eq-man-missions-list {
@@ -71,6 +72,25 @@
                 &:hover {
                     background-color: transparent;
                 }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Missions Modal Add
+/* ---------------------------------------------------------------------- */
+
+#missions {
+    // Modal Add
+    #eq-man-missions-modal-add {
+        overflow: visible;
+
+        .eq-ui-modal-footer {
+            text-align: center;
+
+            a {
+                float: none;
             }
         }
     }
