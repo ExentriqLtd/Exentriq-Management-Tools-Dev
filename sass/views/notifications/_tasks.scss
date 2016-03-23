@@ -5,6 +5,7 @@
 #tasks {
     height: calc(100% - 56px);
     background-color: #f9f9f9;
+    position: relative;
 
     // List
     .eq-man-tasks-list {
@@ -278,5 +279,25 @@
            opacity: .7;
         }
 
+    }
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Missions Modal Add
+/* ---------------------------------------------------------------------- */
+
+#tasks {
+    // Modal Add
+    #eq-man-tasks-modal-add {
+        overflow: visible;
+
+        .eq-ui-modal-footer {
+            text-align: center;
+
+            a {
+                float: none;
+            }
+        }
     }
 }
