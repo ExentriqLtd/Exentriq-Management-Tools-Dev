@@ -143,12 +143,42 @@
                     }
 
                     .tasks_item_assigned_avatars {
+                        position: relative;
 
-                        .circle {
+                        .tasks_item_assigned_avatar {
+                            position: relative;
                             margin-right: 8px;
                             width: 32px;
                             height: 32px;
                             float: left;
+
+                            > a {
+                                width: 32px;
+                                height: 32px;
+                                cursor: pointer;
+
+                                .circle {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+
+                            .eq-ui-dropdown {
+
+                                li {
+                                    a {
+                                        padding-left: 50px;
+
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                            position: absolute;
+                                            left: 16px;
+                                            top: 12px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -160,7 +190,7 @@
                         .tasks_item_assigned_avatars {
                             text-align: right;
 
-                            .circle {
+                            .tasks_item_assigned_avatar {
                                 margin-right: 0;
                                 margin-left: 8px;
                                 float: right;
