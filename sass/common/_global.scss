@@ -6,6 +6,14 @@ body {
 
 }
 
+/* Cordova */
+html.is_cordova {
+
+    .hidden_cordova {
+        display: none;
+    }
+}
+
 /* Container */
 .container, .container-fluid {
     padding-left: 24px;
