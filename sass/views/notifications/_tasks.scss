@@ -139,6 +139,8 @@
                         font-size: 11px;
                         color: #cccccc;
                         margin-bottom: 4px;
+                        width: 100%;
+                        text-align: left;
                         float: left;
                     }
 
@@ -185,6 +187,7 @@
                     &.right {
                         .tasks_item_assigned_title {
                             float: right;
+                            text-align: right;
                         }
 
                         .tasks_item_assigned_avatars {

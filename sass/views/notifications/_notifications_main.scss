@@ -146,3 +146,18 @@ body.tp_notifications_main {
     }
 
 }
+
+/* ---------------------------------------------------------------------- */
+/* CORDOVA
+/* ---------------------------------------------------------------------- */
+
+html.is_cordova {
+
+    #notifications_main {
+
+        .eq-mt-card-tabs {
+            border-bottom: 0 solid #e1e1e1;
+            border-top: 1px solid #e1e1e1;
+        }
+    }
+}
