@@ -95,6 +95,17 @@ body.tp_notifications_main {
         right: -24px !important;
         top: auto !important;
         bottom: 84px !important;
+        max-height: 288px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+        word-wrap: break-word;
+
+        @extend .eq-ui-scrollbar-y;
+
+        @media (max-width: $eq-man-screen-xxs){
+            max-height: 144px;
+        }
 
         li.-autocomplete-item {
             height: 48px;
