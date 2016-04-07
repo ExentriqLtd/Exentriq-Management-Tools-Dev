@@ -26,6 +26,8 @@ $eq-ui-secondary-color: #1bbc9b !default;
 @import "components/global_search";
 
 // views
+@import "views/accounts";
+
 @import "views/notifications/missions";
 @import "views/notifications/notifications";
 @import "views/notifications/notifications_main";
