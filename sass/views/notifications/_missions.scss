@@ -104,5 +104,9 @@ html.is_cordova {
 
     #missions {
         height: 100%;
+
+        > .eq-ui-scrollbar-wrap {
+            height: calc(100% - 40px);
+        }
     }
 }

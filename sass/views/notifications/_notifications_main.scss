@@ -170,5 +170,10 @@ html.is_cordova {
             border-bottom: 0 solid #e1e1e1;
             border-top: 1px solid #e1e1e1;
         }
+
+        // Autocomplete
+        .-autocomplete-container {
+            max-height: 144px;
+        }
     }
 }
