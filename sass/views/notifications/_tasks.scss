@@ -408,8 +408,27 @@
     #eq-man-tasks-modal-add {
         overflow: visible;
 
+        .eq-ui-modal-content {
+            padding: 16px 16px 8px;
+
+            .eq-man-autocomplete {
+                margin-top: 0;
+
+                textarea {
+
+                }
+
+                label {
+                    display: none;
+                }
+            }
+        }
+
         .eq-ui-modal-footer {
             text-align: center;
+            min-height: 48px;
+            line-height: 32px;
+            padding: 6px 16px;
 
             a {
                 float: none;

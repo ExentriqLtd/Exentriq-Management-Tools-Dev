@@ -91,10 +91,11 @@ body.tp_notifications_main {
     // Autocomplete
     .-autocomplete-container {
         position: absolute;
-        left: -24px !important;
-        right: -24px !important;
+        left: -16px !important;
+        right: -16px !important;
         top: auto !important;
-        bottom: 84px !important;
+        bottom: 100% !important;
+        margin-bottom: 16px;
         max-height: 288px;
 
         overflow-y: auto;
@@ -110,7 +111,7 @@ body.tp_notifications_main {
         li.-autocomplete-item {
             height: 48px;
             line-height: 48px;
-            padding: 0 24px;
+            padding: 0 16px;
             font-size: 16px;
             cursor: pointer;
             color: #9b9b9b;
@@ -130,8 +131,18 @@ body.tp_notifications_main {
     .eq-man-autocomplete {
         margin-bottom: 5px;
 
-        .eq-ui-input {
+        .eq-ui-input, .eq-ui-textarea {
             margin-bottom: 0;
+            padding-top: 0;
+        }
+
+        .eq-ui-textarea {
+            padding-bottom: 5px;
+            overflow-y: visible !important;
+            height: 24px;
+            max-height: 48px;
+
+            @extend .eq-ui-scrollbar-y;
         }
     }
 
