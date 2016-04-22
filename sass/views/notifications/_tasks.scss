@@ -7,6 +7,12 @@
     background-color: #f9f9f9;
     position: relative;
 
+    // Optimize for mobile
+    > .eq-ui-scrollbar-wrap-y {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
     // List
     .eq-man-tasks-list {
         border: 0;

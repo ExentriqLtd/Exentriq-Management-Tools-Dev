@@ -5,6 +5,12 @@
 #notifications {
     height: calc(100% - 56px);
 
+    // Optimize for mobile
+    > .eq-ui-scrollbar-wrap-y {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .eq-ui-list {
         border: 0;
         display: block;
@@ -88,6 +94,11 @@ html.is_cordova {
 
         > .eq-ui-scrollbar-wrap {
             height: calc(100% - 40px);
+        }
+
+        .eq-ui-list.eq-ui-hoverable .notifications_item.eq-ui-list-item:not(.active):hover {
+            text-decoration: none;
+            background-color: transparent;
         }
     }
 }

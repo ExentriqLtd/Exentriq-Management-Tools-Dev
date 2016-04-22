@@ -98,7 +98,10 @@ body.tp_notifications_main {
         margin-bottom: 16px;
         max-height: 288px;
 
-        overflow-y: auto;
+        // Optimize for mobile
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+
         overflow-x: hidden;
         word-wrap: break-word;
 
